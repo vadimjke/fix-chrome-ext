@@ -1,0 +1,26 @@
+{
+    "name": "Bringer+ mag54.retailcrm.ru",
+    "description": "Bringer+ mag54.retailcrm.ru",
+    "manifest_version": 2,
+    "version": "1.11",
+    "icons": {
+        "128": "img/icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://mag54.retailcrm.ru/*"],
+            "js": ["scripts/jquery-2.2.4.min.js", "scripts/jquery.hoverIntent.js", "scripts/start.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "background": {
+        "scripts": ["scripts/client.js"],
+        "persistent": false
+    },
+    "permissions": [
+        "https://*.retailcrm.ru/*",
+        "https://*.ecomlogic.com/*",
+        "webNavigation",
+        "storage"
+    ]
+}
